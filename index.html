@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apartamento T2 em Balazar — Póvoa de Varzim | Apresentação Online</title>
+  <meta name="description" content="Apartamento T2 em Balazar, Póvoa de Varzim, com 121 m² de área bruta, 96 m² úteis, 1 suíte, 2 casas de banho, varandas a sul e norte, lugar de garagem e arrecadação. Excelente exposição solar e vistas desafogadas." />
+  <meta name="robots" content="index,follow" />
+
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --bg-alt: #14151d;
+      --card: #1b1d27;
+      --accent: #e63946;
+      --accent-soft: rgba(230, 57, 70, 0.12);
+      --text: #f5f5f7;
+      --muted: #a0a3b1;
+      --border: #262837;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.55);
+      --radius-lg: 18px;
+      --radius-xl: 26px;
+      --radius-pill: 999px;
+      --max-width: 1120px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #18212f 0, #05060a 56%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px 48px;
+    }
+
+    .shell { width: 100%; max-width: var(--max-width); }
+
+    /* HEADER */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 16px 18px;
+      margin-bottom: 20px;
+      background: linear-gradient(120deg, rgba(230, 57, 70, 0.16), rgba(10, 10, 18, 0.4));
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    @media (max-width: 780px) {
+      header { flex-direction: column; align-items: flex-start; }
+    }
+
+    .brand-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-photo-wrap {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,0.65);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.55);
+      background: #11121b;
+      flex-shrink: 0;
+    }
+
+    .brand-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .brand-meta h1 {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .brand-meta p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .brand-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+    }
+
+    @media (max-width: 780px) {
+      .brand-right { align-items: flex-start; }
+    }
+
+    .logo-wrap {
+      max-width: 140px;
+    }
+
+    .logo-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .tagline {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(0, 0, 0, 0.25);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+    }
+
+    .tagline span {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 22px;
+      margin-bottom: 28px;
+    }
+
+    @media (max-width: 840px) {
+      .hero { grid-template-columns: minmax(0, 1fr); }
+    }
+
+    .hero-text {
+      padding: 22px 22px 20px;
+      background: linear-gradient(145deg, #11121b, #05060b);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .pill-location {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .pill-location-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px var(--accent-soft);
+    }
+
+    .hero-title {
+      font-size: 26px;
+      line-height: 1.25;
+      font-weight: 650;
+      margin-bottom: 6px;
+    }
+
+    .hero-sub {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+
+    .hero-meta-item {
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--muted);
+    }
+
+    .hero-meta-item strong { color: var(--text); }
+
+    .hero-price-block {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .hero-price-block .price {
+      font-size: 24px;
+      font-weight: 650;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-price-block .sqm {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease, border-color 0.12s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      border-color: rgba(255, 255, 255, 0.18);
+      color: #fff;
+      box-shadow: 0 14px 32px rgba(230, 57, 70, 0.45);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(230, 57, 70, 0.6);
+      background: #f04554;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: var(--border);
+      color: var(--muted);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-1px);
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .hero-note {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .hero-media {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: radial-gradient(circle at top, #202335, #05060a 70%);
+      box-shadow: var(--shadow-soft);
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    .hero-img-wrap { flex: 1; overflow: hidden; }
+
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: scale(1.02);
+    }
+
+    .hero-strip {
+      padding: 10px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(90deg, rgba(5, 5, 10, 0.95), rgba(26, 27, 40, 0.98));
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .hero-strip span strong { color: var(--text); }
+
+    section { margin-bottom: 28px; }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .section-sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    /* Destaques */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    @media (max-width: 960px) {
+      .highlights-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 600px) {
+      .highlights-grid { grid-template-columns: minmax(0, 1fr); }
+    }
+
+    .highlight-card {
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
+      font-size: 13px;
+    }
+
+    .highlight-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .highlight-value {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    /* Card layout */
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.95fr);
+      gap: 18px;
+    }
+
+    @media (max-width: 900px) {
+      .two-col { grid-template-columns: minmax(0, 1fr); }
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      padding: 16px 16px 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.44);
+      font-size: 14px;
+    }
+
+    .card h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .card p { font-size: 14px; color: var(--muted); }
+
+    .list {
+      margin: 8px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .list li + li { margin-top: 4px; }
+
+    /* GALERIA COM 6 FOTOS */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    @media (max-width: 960px) {
+      .gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 720px) {
+      .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #11121b;
+      min-height: 90px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: scale(1.02);
+    }
+
+    .gallery-item span {
+      position: absolute;
+      bottom: 6px;
+      left: 8px;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.68);
+      color: var(--muted);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .pill {
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.35);
+      color: var(--muted);
+    }
+
+    .note {
+      margin-top: 8px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(230, 57, 70, 0.12);
+      border: 1px solid rgba(230, 57, 70, 0.4);
+      font-size: 13px;
+      color: #ffdfe3;
+    }
+
+    footer {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: space-between;
+    }
+
+    footer strong { color: var(--text); }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="shell">
+
+      <!-- HEADER -->
+      <header>
+        <div class="brand-left">
+          <div class="brand-photo-wrap">
+            <img src="hugo-silva.jpg" alt="Hugo Silva - Consultor Imobiliário">
+          </div>
+          <div class="brand-meta">
+            <h1>Hugo Silva</h1>
+            <p>Consultor Imobiliário — Grande Porto, Vila do Conde e Póvoa</p>
+          </div>
+        </div>
+        <div class="brand-right">
+          <div class="logo-wrap">
+            <img src="remax-elegance-logo.jpg" alt="RE/MAX Elegance">
+          </div>
+          <div class="tagline">
+            Choose Your Dream <span>|</span> Live in it
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- HERO -->
+        <section class="hero">
+          <div class="hero-text">
+            <div class="pill-location">
+              <div class="pill-location-dot"></div>
+              T2 — Balazar, Póvoa de Varzim
+            </div>
+            <h2 class="hero-title">
+              Apartamento T2 com suíte, varandas e garagem em Balazar
+            </h2>
+            <p class="hero-sub">
+              Apartamento T2 em zona tranquila de Balazar, inserido em prédio bem cuidado, com ótimas vistas e excelente exposição solar. Dispõe de 1 suíte, 1 WC completo adicional, sala de estar e jantar, cozinha funcional, varandas a sul (sala e cozinha) e a norte (quartos), lugar de garagem privativo e arrecadação.
+            </p>
+
+            <div class="hero-meta">
+              <div class="hero-meta-item"><strong>T2</strong> com suíte</div>
+              <div class="hero-meta-item"><strong>121 m²</strong> área bruta</div>
+              <div class="hero-meta-item"><strong>96 m²</strong> área útil</div>
+              <div class="hero-meta-item"><strong>2</strong> casas de banho</div>
+              <div class="hero-meta-item"><strong>Varandas</strong> norte / sul</div>
+              <div class="hero-meta-item"><strong>Garagem</strong> + arrecadação</div>
+            </div>
+
+            <div class="hero-price-block">
+              <div class="price">260.000 €</div>
+              <div class="sqm">≈ 2.149 €/m²</div>
+            </div>
+
+            <div class="hero-cta-row">
+              <a class="btn btn-primary" href="https://wa.me/351926691685" target="_blank" rel="noopener noreferrer">
+                Contactar via WhatsApp
+              </a>
+              <a class="btn btn-secondary" href="mailto:seu-email@seu-dominio.pt?subject=Interesse%20no%20Apartamento%20T2%20em%20Balazar">
+                Enviar email
+              </a>
+            </div>
+            <p class="hero-note">
+              Informação para efeitos de apresentação ao cliente comprador. Detalhes sujeitos a confirmação.
+            </p>
+          </div>
+
+          <aside class="hero-media">
+            <div class="hero-badge">Sala com varanda a sul</div>
+            <div class="hero-img-wrap">
+              <img
+                class="hero-img"
+                src="images/foto1.jpg"
+                alt="Sala de estar e jantar com varanda em Balazar"
+              />
+            </div>
+            <div class="hero-strip">
+              <span><strong>Localização:</strong> N206, Balazar, Póvoa de Varzim (Porto)</span>
+              <span>Zona tranquila, vistas desafogadas e serviços por perto</span>
+            </div>
+          </aside>
+        </section>
+
+        <!-- DESTAQUES -->
+        <section>
+          <h2 class="section-title">Destaques principais</h2>
+          <p class="section-sub">
+            Pontos-chave do apartamento para uma decisão rápida e informada.
+          </p>
+
+          <div class="highlights-grid">
+            <div class="highlight-card">
+              <div class="highlight-label">Tipologia</div>
+              <div class="highlight-value">T2</div>
+              <p>Dois quartos, incluindo uma suíte com varanda.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-label">Área</div>
+              <div class="highlight-value">121 m² brutos</div>
+              <p>96 m² de área útil, bem distribuída entre zona social e zona privada.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-label">Estado</div>
+              <div class="highlight-value">Segunda mão / bom estado</div>
+              <p>Pronto a habitar, em prédio cuidado, com boa manutenção.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-label">Preço</div>
+              <div class="highlight-value">260.000 €</div>
+              <p>Preço competitivo face à área, tipologia e condições.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-label">Exposição solar</div>
+              <div class="highlight-value">Norte / Sul</div>
+              <p>Varandas a sul (sala e cozinha) e a norte (quartos), garantindo luz ao longo do dia.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-label">Exterior</div>
+              <div class="highlight-value">Varandas</div>
+              <p>Varandas em ambas as frentes, com vistas desafogadas.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-label">Estacionamento</div>
+              <div class="highlight-value">Lugar privativo</div>
+              <p>Lugar de garagem incluído no preço, com arrecadação de apoio.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-label">Prédio</div>
+              <div class="highlight-value">2º andar</div>
+              <p>2º andar em prédio sem elevador, ambiente calmo e familiar.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- DESCRIÇÃO + CARACTERÍSTICAS -->
+        <section>
+          <div class="two-col">
+            <article class="card">
+              <h3>Descrição do imóvel</h3>
+              <p>
+                Apresentamos este excelente apartamento T2, localizado numa zona tranquila de Balazar, com todos os serviços por perto. Inserido em prédio bem cuidado, sem elevador, destaca-se pela luminosidade, disposição funcional e vistas desafogadas.
+              </p>
+              <p style="margin-top: 10px;">
+                O imóvel é composto por dois quartos, sendo um deles suíte com varanda, um WC completo adicional, sala de estar e jantar ideal para momentos em família e uma cozinha funcional, pensada tanto para refeições rápidas como mais elaboradas. As varandas a sul (sala e cozinha) e a norte (quartos) garantem ótima exposição solar ao longo do dia.
+              </p>
+              <p style="margin-top: 10px;">
+                Completa este apartamento um lugar de garagem privativo e uma arrecadação, acrescentando conforto e capacidade de arrumação. A relação qualidade/preço torna-o uma opção sólida para habitação própria.
+              </p>
+            </article>
+
+            <aside class="card">
+              <h3>Distribuição e características</h3>
+              <ul class="list">
+                <li>Tipologia T2.</li>
+                <li>1 suíte com varanda.</li>
+                <li>1 quarto adicional com varanda.</li>
+                <li>2 casas de banho completas.</li>
+                <li>Sala de estar e jantar com boa área.</li>
+                <li>Cozinha funcional, com zona de refeições.</li>
+                <li>Varandas a sul (sala e cozinha) e a norte (quartos).</li>
+                <li>Armários embutidos.</li>
+                <li>Lugar de garagem privativo.</li>
+                <li>Arrecadação incluída.</li>
+                <li>Prédio bem cuidado, 2º andar sem elevador.</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <!-- LOCALIZAÇÃO -->
+        <section>
+          <h2 class="section-title">Localização e envolvente</h2>
+          <div class="two-col">
+            <div class="card">
+              <h3>Balazar, Póvoa de Varzim</h3>
+              <p>
+                Balazar é uma freguesia do concelho da Póvoa de Varzim com ambiente calmo e residencial, beneficiando da proximidade a vias de acesso, serviços locais e zonas verdes. A N206 assegura ligações rápidas a outras zonas do concelho e concelhos vizinhos.
+              </p>
+              <p style="margin-top: 10px;">
+                O apartamento situa-se numa área com serviços do dia a dia por perto, mantendo ao mesmo tempo uma envolvente tranquila, ideal para quem procura qualidade de vida fora dos centros mais congestionados.
+              </p>
+
+              <div class="pill-row">
+                <div class="pill">N206 — bons acessos</div>
+                <div class="pill">Zona tranquila</div>
+                <div class="pill">Serviços nas proximidades</div>
+                <div class="pill">Vistas desafogadas</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Referência de localização</h3>
+              <p>
+                Por motivos de privacidade, a localização exata não é indicada nesta apresentação. A informação detalhada é facultada em contexto de visita ou negociação avançada.
+              </p>
+              <ul class="list">
+                <li>Concelho: Póvoa de Varzim</li>
+                <li>Distrito: Porto</li>
+                <li>Freguesia: Balazar</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- GALERIA (6 FOTOS) -->
+        <section>
+          <h2 class="section-title">Imagens do imóvel</h2>
+          <p class="section-sub">
+            As imagens seguintes representam o estado atual do imóvel. Podem ser fornecidos mais registos fotográficos ou vídeo mediante pedido.
+          </p>
+
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="images/foto1.jpg" alt="Sala de estar e jantar com varanda a sul">
+              <span>Sala + Varanda sul</span>
+            </div>
+            <div class="gallery-item">
+              <img src="images/foto2.jpg" alt="Suíte com varanda">
+              <span>Suíte</span>
+            </div>
+            <div class="gallery-item">
+              <img src="images/foto3.jpg" alt="Quarto com varanda">
+              <span>Quarto</span>
+            </div>
+            <div class="gallery-item">
+              <img src="images/foto4.jpg" alt="Cozinha com acesso à varanda">
+              <span>Cozinha</span>
+            </div>
+            <div class="gallery-item">
+              <img src="images/foto5.jpg" alt="Casa de banho">
+              <span>Casa de banho</span>
+            </div>
+            <div class="gallery-item">
+              <img src="images/foto6.jpg" alt="Garagem / arrecadação / vistas exteriores">
+              <span>Garagem / Exterior</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section>
+          <div class="card">
+            <h3>Quer falar sobre este imóvel ou receber outras opções?</h3>
+            <p>
+              Se pretende mais informação, esclarecimento de dúvidas ou explorar imóveis alternativos na mesma zona, estou disponível para o apoiar em todo o processo de compra ou investimento.
+            </p>
+            <div class="hero-cta-row" style="margin-top: 16px;">
+              <a class="btn btn-primary" href="https://wa.me/351926691685" target="_blank" rel="noopener noreferrer">
+                Falar agora no WhatsApp
+              </a>
+              <a class="btn btn-secondary" href="mailto:seu-email@seu-dominio.pt?subject=Pedido%20de%20informa%C3%A7%C3%B5es%20-%20Apartamento%20T2%20Balazar">
+                Pedir mais informações por email
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div>
+          <strong>Hugo Silva</strong> · Consultor Imobiliário · WhatsApp: 926 691 685
+        </div>
+        <div>
+          Choose Your Dream | Live in it
+        </div>
+      </footer>
+
+    </div>
+  </div>
+</body>
+</html>
